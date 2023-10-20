@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+body {
+    background-color: #d6fde9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #1e402f;
+}
+
+h1#principal {
+    text-align: center;
+    background-color: #3c805e;
+    color: white;
+}
+
+/* Para identificar o h1 no html,tenho de colocar # no CSS
+
+     id em HTML = # em CSS    Só posso usar 1 vez  - id = #  Por página
+
+     class em HTML = . em CSS    Posso usar Várias vezes por página
+     
+    Posso só identificar o seletor #principal em vez de h1#principal 
+    
+    ou 
+    
+    .basico  em vez de h1.basico sem acentuação
+
+
+
+    The <span> tag is an inline container used to mark up a part of a text, or a part of a document.
+
+    A tag span assim como a tag div são tags que não tem nenhuma significação semântica no HTML. Elas servem somente para estilizarmos trechos específicos do código. Se não houver uma tag que especifique semanticamente o trecho que você estiver marcando pode-se usar as tags span ou div. A tag span é para elementos em linha e a tag div para elementos em bloco. Um exemplo de uso está abaixo:
+
+    Em HTML:
+
+    <p>Quero este trecho do texto em <span class="basico">verde</span>!</p>
+
+
+    Em CSS:
+
+    .basico {
+        color: #3c805e;
+    }
+
+    */
+
+h2 {
+    color: #3c805e;
+}
+
+.basico{
+    color: #3c805e;
+    font-weight: bold;
+}
+
+.intermediario{
+    color: #80793c;
+    font-weight: bold;
+}
+
+.avancado{
+    color: #803c3c;
+    font-weight: bold;
+}
+
+.destaque {
+    background-color: rgba(197, 197, 96, 0.438);
+}

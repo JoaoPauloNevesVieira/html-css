@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            margin: 0px;
+        }
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+        nav {
+            background-color: rgb(102, 102, 102);
+            padding: 3px;
+            box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.315);
+            /*
+            Tem Sombra Interna e Externa!!
+            No Devtools,tb posso mexer nos parametros da sombra até encontrar os valores pretendidos e dps copiar...
+            Não devo exagerar nos valores da sombra,o menos forte possível,não muito carregado...a sombra é meio que transparente,não é escura....
+
+            Nem devo exagerar nas bordas das páginas,coisa leve,o cérebro entende...
+            */
+        }
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav > a:hover {
+            text-decoration: underline;
+        }
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px 0px;
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.384);
+        }
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+        article > aside {
+            background-color: rgb(165, 165, 165);
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+        footer > p {
+            margin: 0px;
+            
+            /*
+            Coloquei está Tag,para zerar a margin do próprio parágrafo que por definição estava a 16px
+            Assim, consegui colocar mais junto...
+            */
+        }
+        div#bola {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <h2>Esportes Política Tecnologia</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quod minus est iste quam ullam quo facilis accusantium explicabo, laborum libero iusto possimus voluptate ab, rem dolores nulla magni ea!</p>
+
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, cumque? Quasi recusandae nostrum nobis omnis. Facilis quasi dolorum dolores soluta molestias, veniam ducimus aliquam? Ipsam nemo necessitatibus minima itaque asperiores.</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido pelo Curso em Vídeo</p>
+    </footer>
+    <div id="bola"></div>
+    <!--
+
+        - Sem valor semântico: 
+        
+        Sem Significado
+
+
+        <div>  -> É um block
+
+        <span> -> É um inline
+
+
+        - Com valor semântico:
+
+        Com Significado
+
+
+        <header>   -> cabeçalho
+
+        <nav>	   -> para menus, links, navegação
+
+        <main>	   -> principal
+
+        <section>  -> seção
+
+	    <article>  -> artigo
+
+		<aside>	   -> periférico ao artigo (ex: escritor / autor)
+        
+        <footer>   -> rodapé
+
+
+
+
+    -->
+</body>
+</html>

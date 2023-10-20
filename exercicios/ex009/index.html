@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+
+<body>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <!--Tag OL,permite ordenar a lista.
+        Tag Type,escrever a frente de OL, permite eu escolher numeração normal ou romana ou com letras e posso escolher,se quero com letra grande ou pequena.
+        Se eu colocar a Tag Start a frente de Type,permite que eu começe a numeração pelo numéro que eu quero exemplo: start="4"
+        Tag LI,permite numerar a lista que eu pretendo fazer...-->
+    <ol type="1"> 
+        <li>Acordar</li>
+        <li>Ligar para o João</li>
+        <li>tomar café</li>
+        <li>Escovar os dentes</li>
+        <li>Ir para a faculdade</li>
+        <li>Almoçar</li>
+        <li>Ir para o trabalho</li>
+        <li>Voltar para casa</li>
+        <li>Jantar</li>
+        <li>Dormir</li>
+    </ol>
+    <h2>Listas não Ordenadas</h2>
+    <ul type="square"> <!-- disc square  circle-->
+        <li>Pão</li>
+        <li>Leite</li>
+        <li>Tomate</li>
+        <li>Alface</li>
+        <li>Manteiga</li>
+        <li>Arroz</li>
+        <li>Feijão</li>
+
+        <!--Criar vários Tag li ao mesmo tempo,escrever li*7 ou o numéro pretendido...posso fazer isso noutras Tags.-->
+
+    </ul>
+  <h2>Minhas linguagens favoritas</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Clipper</li>
+            <li>Visual Basic</li>
+            <li>Fortran</li>
+            <li>Delphi</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="5"> <!--Se eu colocar a Tag Start a frente de Type,permite que eu começe a numeração ou as letras do alfabeto pelo numéro que eu quero, exemplo: start="5",é o 5 porque a Tag só aceita numéração e a lista de cima vai até ao numéro 4 e a lista de baixo começa no 5 para dar sequência ao alfabeto.
+        O normal é,uma lista nova,tem uma numeração nova,do início...mas se quiser,posso fazer o que escrevi em cima...-->
+            <li>PHP</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Kotlin</li>
+        </ol>
+    </ol>
+    <h2>Meus jogos favoritos</h2>
+ <ol>
+    <li>NES</li>
+    <ul type="square">
+        <li>Mario Bros</li>
+        <ul type="circle">
+        <li>Mario Bros3</li>
+        <li>Mario:Lost Levels</li>
+        </ul>
+        <li>Ninja Gaiden</li>
+    </ul>
+    <li>SNES</li>
+    <ul type="square">
+        <li>Mario</li>
+        <li>Donkey Kong</li>
+    </ul>
+    <li>PlayStation</li>
+    <ul type="square">
+        <li>Final Fantasy</li>
+        <li>Castlevania</li>
+    </ul>
+ </ol>
+ <h2>Lista de Definições</h2>
+ <dl>
+    <dt>HTML</dt>                                                         <!--Tag dt,quer dizer Termo-->
+    <dd>Linguagem de marcação para a criação do conteúdo de um site.</dd> <!--Tag dd,quer dizer Descrição-->
+    <dt>CSS</dt>                                   <!--Usar estas Tags,facilita nos mecanismos de busca e o google valoriza isso-->
+    <dd>Linguagem de marcação para a criação do design de um site.</dd>
+    <dt>JavaScript</dt>
+    <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl>
+    <!--Usar a tecla alt,posso clicar em várias palavras e adicionar palavras ou comandos ao mesmo tempo se for esse o caso de ser a mesma coisa para ambos ou apagar palavras ou letras se for esse o caso,
+    EX: tenho a tag ol em várias linhas e quero trocar para ul,
+    ou adicionar type a frente de vários ol se for esse o caso-->
+</body>
+</html>

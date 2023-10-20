@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1 { /* 
+            
+            h1 é box-level Por padrão, em caso de dúvida,posso ver no Devtools em Display se é Inline ou Block.
+
+
+            Más tb posso mudar o h1 para inline sé quiser,basta escrever: 
+
+            display: inline  ao fazer isso,já não consigo por altura e largura
+            height: 300px;
+            width: 300px;
+
+            */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;
+
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
+        }
+
+        /*
+        Como no "padding", também existe um SENTIDO/ORDEM (do rélogio) correta PARA INSERIR as propriedades de margin descritas logo acima. A "direção" correta é: 
+
+        1) - Top     (parte de cima de um elemento)
+        2) - Right   (parte direita)
+        3) - Bottom  (parte de baixo)
+        4) - left    (parte esquerda)
+
+        O valor dessas propriedades geralmente é inserido em 'px' ou 'em'.
+
+        Propriedades de margem:
+
+        margin-top:  10px;
+        margin-right:  10px;
+        margin-bottom:  10px;
+        margin-left:  10px;
+
+
+        Centralizar horizontalmente caixa na tela:
+        
+        
+        margin: auto;
+
+
+        Podemos utilizar uma Shorthand / Simplificar todas essas declarações de "margin" e "padding" em uma única linha, exemplo:
+        
+
+        margin: 15px 10px 10px 15px;
+
+
+        OBSERVAÇÃO: 
+        
+        Mesmo em shorthands como a do exemplo acima, os valores devem ser declarados na ordem orientada 
+        ( top, right, bottom e left ).
+        
+        
+        Se quisermos configurar os quatro lados do margin de uma só vez com o mesmo valor nos quatro lados,exemplo:
+
+
+        margin: 10px;
+
+
+        Se quisermos centralizar um elemento (CAIXA) de forma automática, mas ainda assim , alterar o margin do sentido de cima (top) ou de baixo (bottom), devemos inserir a seguinte declaração shorthand:
+        
+        margin: 10px auto 10px auto;
+
+
+        Quando colocamos somente dois valores, significa que os sentidos de CIMA E DE BAIXO são representados pelo primeiro valor e os sentidos de ESQUERDA E DIREITA são representados pelo segundo valor,exemplo:
+        
+        
+        margin: 10px 20px;
+
+
+        As principais Propriedades de Estilo para Outline e Border são:
+
+        outline-width (largura da outline)
+        outline-style (estilo da outline)
+        outline-color (cor da outline).
+
+
+        Podemos utilizar uma Shorthand / Simplificar todas essas declarações de "outline" e "border" em uma única linha, exemplo:
+
+
+        outline: 10px solid black;      ///      border: 10px solid red;
+
+        Os valores devem ser declarados na ordem orientada 
+        ( width, style e color).
+        
+        
+        Os Estilos mais utilizados em (outline-style e border-style ), são:
+
+        solid   (linha sólida)
+        dashed  (outline tracejada)
+        dotted  (outline pontilhada)
+        double  (linha dupla)
+        groove  (outline "3d")
+        
+        
+        */
+
+        a { 
+            /* 
+            
+            A Tag 'a' é inline-level Por padrão, em caso de dúvida,posso ver no Devtools em Display se é Inline ou Block
+
+            Más tb posso mudar o 'a' para Box-level sé quiser,basta escrever: 
+
+            display: block  ao fazer isso,já não consigo por altura e largura
+            height: 300px;
+            width: 300px;
+
+            Característica de um block:
+
+            Começa numa linha sózinha e o corpo dele ocupa a largura inteira do site.
+
+
+            Más,se eu quiser um inline com altura e largura,tenho de colocar: 
+
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+
+            */
+            border: 10px solid red;
+
+            padding: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level,mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+</body>
+</html>
+
+margin: auto;
+
+

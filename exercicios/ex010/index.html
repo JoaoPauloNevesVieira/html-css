@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://gustavoguanabara.github.io/" target="_blank" rel="external">repositório público no Github</a></p>
+    <!--Se eu quero abrir um link,noutra aba,que não que não pertence ao "site",tenho de escrever a frente do site externo: target="_blank" rel="external" -->
+    <p>Você também pode acessar o meu <a href="https://youtube.com/cursoemvideo/" >canal gratuito no Youtube</a></p>
+    <p>Você também pode acessar o <a href="https://www.w3schools.com/html" hreflang="en" target="_blank" rel="external">w3schools</a>,que tem exercícios de html para fazer.</p>
+
+    <!--Outro atributo bem útil da tag de âncora é o hreflang, que permite indicar qual é o idioma principal do site para onde o link está desviando o 
+    fluxo de navegação. Isso vai permitir avisar ao navegador e a softwares de tradução como lidar caso o visitante opte por traduzir automaticamente os conteúdos.-->
+
+
+    <h1>Usando links internos</h1 >
+    <p>Esta é a primeira página do site.Se você quiser,pode acessar também a minha <a href="pag002.html" rel="next">Segunda página</a></p>
+    <!--Usar as teclas CTRL + ESPAÇO,permitem adicionar ficheiros que estejam na mesma pasta ou Sub-pastas onde se encontra o index.html como por exemplo: pag002.html-->
+
+    <!--Se,eu estou numa sub-pasta e quero regressar a página principa, tenho de escrever: ../ e aparece as outras páginas dísponiveis... -->
+
+    <!--Colocar a Tag rel="next" facilita os mecânismos de busca a encontrar qual é o sistema de navegação que eu estou a criar no meu site e não é o google a decidir qual é a próxima página....
+    next  indica que o link é para a próxima parte do documento atual
+    prev  indica que o link é para a parte anterior do documento atual
+    author  indica que é um link para o site do autor do artigo atual
+    external  indica que é um link para outro site que não faz parte do site
+    nofollow  indica que é um link para um site não endossado, como um link pago ou não de confiança
+    dofollow  indica que é um link para um site de confiança
+
+
+    NAVEGANDO POR PASTAS LOCAIS: Não sei se você conhece um pouco do mundo Linux, mas servidores Web normalmente rodam
+    esse sistema operacional. Se estiver se referindo à pasta atual do servidor, pode usar ./ antes do nome do arquivo. Se quiser se referir à
+    pasta imediatamente superior na hierarquia, use ../ para voltar um nível para a pasta mais externa. E por favor, aprenda Linux.
+    Caso precise voltar 2, 3, 4 pastas em um link é só continuar usando a sequencias de "../../../arquivo.html" para cada sequencia de ../ o código volta uma página.
+    -->
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" target="_self">página de notícias</a></p>
+
+    <h1>Links para download</h1>
+    <ul>
+
+        <li><a href= "noticias/livro/10 - Ligações em toda parte.pdf" download="10 - Ligações em toda parte.pdf" target="_blank" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="noticias/livro/10 - Ligações em toda parte.zip" download="10 - Ligações em toda parte.zip" type="application/zip">Livro compactado em ZIP</a></li>
+        <!--
+            
+        -->
+
+
+
+    </ul>
+
+
+
+
+    </body>
+    </html>
+
+</body>
+</html>

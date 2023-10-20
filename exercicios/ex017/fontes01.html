@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        body{
+        font-family:  'Work Sans',Arial, Helvetica, sans-serif;
+            font-size: 1em;
+            font-weight: bolder;
+            font-style: italic;
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-family: 'Work Sans',sans-serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic;
+        }
+
+
+        h2{ font: italic bold 2em 'Work Sans',sans-serif;}
+
+            /*Shorthand font: simplificando fontes,colocar tudo num só comando. Em vez de colocar como no h1 em cima...este método,não para tudo...
+
+
+            A sequência deve ser:
+            
+            
+            font-style   ->   font-weight   ->   font-size   ->   font-family;
+
+
+            Coloco nesta sequência,a seguir a Tag font, Exemplo: 
+            
+            font:  italic  bolder  3em  'Work Sans', sans-serif;
+            
+
+            Não precisa ter todas as propriedades, mas a sequência deve ser seguida;
+            
+            Ex: font:  bold  2em  'Work Sans';*/
+
+
+    </style>
+
+    <!--
+
+    Decoração (sublinhado):
+
+
+	text-decoration: underline;
+
+        
+
+    Peso da letra, mais Negrito ou menos Negrito!!!
+
+    font-weight: nome ou número;	    
+    
+    nome:  lighter - normal - bold - bolder
+    
+    número:  100 - 200 - 300 - 400 - 500 - 600 - 700 - 800 - 900
+
+    
+    Todos esses valores de peso para font-weight são aceites para algumas fontes.
+
+
+
+   Estilo (itálico):
+
+	font-style: - normal - italic
+
+
+
+    Font-family mais comuns:    Arial, Verdana e Helvetica
+
+    font-family: 'Courier New';   -> nomes compostos precisam de 'aspas'
+
+    font-family: sans-serif;	    -> qualquer fonte sem serifa
+
+    font-family: serif;		    -> qualquer fonte com serifa
+
+    font-family: monospace;     -> qualquer fonte monoespaçada
+
+
+Safe combination:
+
+
+	Se não tiver uma opção de fonte, passa para a seguinte. (Pesquisar mais: CSS web safe font combinations). 
+
+
+	Ex:	font-family: Arial, Helvetica, sans-serif;
+
+		font-family: 'Times New Roman', Times, serif;
+
+
+
+ *Dica: Após "font-family:", ao clicar Ctrl + Espaço, o VS Code sugere as principais safe combinations.
+
+
+Medidas Absolutas: 
+
+
+	cm - Centímetro
+    mm - Milímetro
+    in - Polegada
+    px - Pixel
+    pt - Ponto
+    pc - Paica
+
+
+Medidas Relativas:
+
+
+	em	->	relativo ao tamanho natural da fonte
+
+	ex	->	relativo a altura x da fonte
+
+	rem	->	tipo em, mas relativo a fonte configurada no body
+
+	vw	->	relativo a largura da view port
+
+	vh	->	relativo a altura da view port
+
+	%	->	percentagem
+
+
+Recomendação w3c:  "px" ou "em"
+
+
+Altura padrão:  16px ou 1em - escrever sem espaço
+-->
+</head>
+<body>
+    <h1>Trabalhando com fontes</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique fugit ut mollitia quo quidem possimus nostrum unde provident odio modi aperiam maiores accusantium ab saepe vero nesciunt, quod laudantium nobis.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos recusandae magnam sunt earum at aut repellat non laboriosam quasi, eius rerum minima, accusantium tempora unde impedit sint sed facere minus?</p>
+    <h2>Subtítulo de exercícios</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dicta hic incidunt ea dolores nam qui a facilis ad ullam placeat, libero corporis tempore eos facere porro consectetur. Accusantium, cum.</p>
+    
+</body>
+</html>

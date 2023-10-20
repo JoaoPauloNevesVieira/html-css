@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div:hover {
+            color: red;
+        }
+
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+            width: 300px;
+        }
+
+        div > p {
+            display: none;
+        }
+    </style>
+    <!--
+
+        # é um id
+
+        . é uma class
+
+        : é uma pseudo-classe ,estás têm  de estar relacionadas a algum elemento ou alguma class
+
+        :: é um pseudo-elemento,posso usar em elementos e em classes
+
+        > é o "filho" ( está dentro de algo) por exemplo,um paragráfo  div: > p
+
+
+
+
+
+        ás pseudo-classes definem estados de cada elemento no HTML... 
+
+        ex: se ele está ativo       - active
+            se ele está marcado     - checked
+            se ele está vazio       - empty
+            se ele está habilitado  - enabled
+
+        Existe um,hover é uma pseudo-class de vários elementos ,o que significa hover?
+        
+        Significa,quando eu passar o rato por cima,ele vai ficar como pretendo!!
+
+        EX:
+
+        div:hover {
+            color: red;
+        }
+
+
+
+
+
+
+        div > p { display: none; }   
+        
+        Este sinal > a frente de seletor,permite que consiga esconder um parágrafo inteiro ou uma simples palavra....
+
+
+        Para conseguir visualizar esse parágrafo novamente,tenho de escrever:
+
+        div:hover > p { display: block;}
+    
+    -->
+
+</head>
+<body>
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>Passe o mouse aqui
+        <p>TEXTO ESCONDIDO...</p>
+    </div>
+    <p>Fim do exemplo</p>
+</body>
+</html>
