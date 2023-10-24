@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento Vertical</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+        #container { /* - O que tá de fora (container) -> position: relative */
+
+            /* Versão mais fácil,vi nos comentários
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            Essas propriedades sempre são colocadas no elemento-pai (container) */
+
+
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;  /* Duas vezes 100% para centralizar melhor a imagem */
+
+            position: relative;
+
+
+            height: 100vh;
+            padding: 10px;
+            background-color: purple;
+        }
+
+        #conteudo{   /* - O que tá de dentro (conteúdo) -> position: absolute */
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+
+            position: absolute; /* -> permite usar as propriedades top e left */
+
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+
+            left: 50%;    /* -> o canto top left que ficará centralizado (precisa de transform) */
+            top: 50%;
+
+            transform: translate(-50%, -50%);  /* -> translate(mov horizontal, mov vertical).
+                                               -> Muda a posição de referência de 'topo/esquerdo' (padrão) para uma outra qualquer (ex: centro) */
+
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>
