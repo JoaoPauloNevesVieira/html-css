@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo Fixo de Tela</title>
     <style>
         body {
             height: 100vh;
+            /*
+
+            vh	->	altura da view port (height)
+
+	        vw	->	largura da view port (width)
+
             background-color: black;
             background-image: url(imagens/wallpaper002.jpg);
-            background-position: center;
+            background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
+
+            Observação: Quando usamos imagens de fundo, é natural pensarmos que não é necessário configurar uma cor de fundo... Entretanto, é sim recomendável que você configure uma cor de fundo, mesmo que posteriormente aplique uma imagem de fundo por cima dessa cor. 
+
+            Isso porque quando o nosso site é carregado, primeiro é carregado o conteúdo HTML, sendo interpretado pelo navegador, e só depois é que as imagens são encaminhadas. Primeiro chega o texto e depois as imagens... Então durante esse processamento, principalmente se o seu servidor estiver lento, pode ser que ele carregue o site (texto), e a imagem de fundo (que é um arquivo um pouco mais pesado) demore alguns segundos para ser exibida. 
+
+            Sendo assim, não é recomendado que você mostre o site branco e depois a imagem apareça... O ideal é que você coloque uma cor no fundo para que o usuário consiga já ir consumindo o conteúdo e aí sim posteriormente a imagem seja exposta.
+
+
+            coloquei o margin: 0px para não ter aquela barra de lado....
+            */
+            margin: 0px;
+
+            /* Shorthand - background: color > image > position > /size > repeat > attachment
+            Tenho de colocar está / ao lado de size*/
+
+            background: black url(imagens/wallpaper002.jpg) center center/cover no-repeat fixed;
         }
         
         main {
@@ -19,20 +42,26 @@
             width: 400px;
             padding: 10px;
             margin: auto;
-            border: 1px solid black;
+            border: 1px solid darkblue;
             border-radius: 15px;
         }
-
-
     </style>
 </head>
 <body>
     <main>
         <h1>Teste de Imagem de Fundo</h1>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem beatae maiores aliquid! Impedit ad, nulla deleniti unde blanditiis dolorem distinctio modi necessitatibus autem vero quidem expedita. Repellat iure debitis tempora?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos tempora pariatur, hic sit necessitatibus numquam tempore quos neque ullam ad commodi impedit reprehenderit fugit quam, eligendi rerum porro, rem eos.
-            Vitae, commodi, ipsa omnis perspiciatis, at laudantium similique quidem sapiente quo eos architecto unde voluptatibus quia tempora! Expedita nihil eveniet ut iure quibusdam fugit harum dolores, beatae odio dolor enim.
-        </p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam consequuntur totam obcaecati itaque reprehenderit quaerat id ducimus, saepe esse qui, eveniet consectetur deleniti suscipit excepturi corporis nemo sed deserunt? Architecto.
+        Assumenda architecto eius voluptatem minus officiis sunt quidem, eos quia ducimus enim dolorem voluptas animi libero laborum repellat! Ex debitis ullam deserunt eius quas! Quo minus quas quisquam repellendus cupiditate!
+        Eos aspernatur ipsa odit laboriosam tempore vitae ipsum. Possimus, error dolorum! Dolores nam voluptates enim quisquam fugit quia minus quod, maxime rem necessitatibus impedit reiciendis in assumenda sunt repellendus iste.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam consequuntur totam obcaecati itaque reprehenderit quaerat id ducimus, saepe esse qui, eveniet consectetur deleniti suscipit excepturi corporis nemo sed deserunt? Architecto.
+        Assumenda architecto eius voluptatem minus officiis sunt quidem, eos quia ducimus enim dolorem voluptas animi libero laborum repellat! Ex debitis ullam deserunt eius quas! Quo minus quas quisquam repellendus cupiditate!
+        Eos aspernatur ipsa odit laboriosam tempore vitae ipsum. Possimus, error dolorum! Dolores nam voluptates enim quisquam fugit quia minus quod, maxime rem necessitatibus impedit reiciendis in assumenda sunt repellendus iste.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam consequuntur totam obcaecati itaque reprehenderit quaerat id ducimus, saepe esse qui, eveniet consectetur deleniti suscipit excepturi corporis nemo sed deserunt? Architecto.
+        Assumenda architecto eius voluptatem minus officiis sunt quidem, eos quia ducimus enim dolorem voluptas animi libero laborum repellat! Ex debitis ullam deserunt eius quas! Quo minus quas quisquam repellendus cupiditate!
+        Eos aspernatur ipsa odit laboriosam tempore vitae ipsum. Possimus, error dolorum! Dolores nam voluptates enim quisquam fugit quia minus quod, maxime rem necessitatibus impedit reiciendis in assumenda sunt repellendus iste.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam consequuntur totam obcaecati itaque reprehenderit quaerat id ducimus, saepe esse qui, eveniet consectetur deleniti suscipit excepturi corporis nemo sed deserunt? Architecto.
+        Assumenda architecto eius voluptatem minus officiis sunt quidem, eos quia ducimus enim dolorem voluptas animi libero laborum repellat! Ex debitis ullam deserunt eius quas! Quo minus quas quisquam repellendus cupiditate!
+        Eos aspernatur ipsa odit laboriosam tempore vitae ipsum. Possimus, error dolorum! Dolores nam voluptates enim quisquam fugit quia minus quod, maxime rem necessitatibus impedit reiciendis in assumenda sunt repellendus iste.</p>
     </main>
 </body>
 </html>
