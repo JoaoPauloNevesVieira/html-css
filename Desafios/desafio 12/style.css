@@ -11,8 +11,12 @@
 
 a {
     color: white;
-    font-size: medium;
+    font-size: large;
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 header {
@@ -31,23 +35,29 @@ header h1 {
 }
 
 main {
-    height: 1000px;
 }
 
 article {
 
     font-family: 'Sriracha', cursive;
-    padding-left: 10px;
+    font-size: x-large;
+    padding: 50px 0px 0px 0px;
     position: relative;
-
-    width: 200px;
-    height: 300px;
+    margin-left: 20px;
+    width: 250px;
+    height: 400px;
 }
 
 .imagem {
+    background-color: black;
     background-image: url(imagens/background001.jpg);
+    background-position: center center;
+    margin-left: 0px;
     position: absolute;
-    height: 1000px;
-    width: 1000px;
+    height: 500px;
+    width: 500px;
+}
 
+footer {
+    background-color: black;
 }
