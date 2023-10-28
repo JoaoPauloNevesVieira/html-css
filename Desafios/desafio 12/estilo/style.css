@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', sans-serif;
+    --fonte3: 'Sriracha', cursive;
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -8,6 +18,7 @@
 html,body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte1);
 }
 
 header {
@@ -18,7 +29,12 @@ header {
 
 header > h1 {
     padding-top: 50px;
-    font-variant: small-caps;/* Posso usar está forma,para meter as letras grandes text-transform: uppercase;*/
+    font-variant: small-caps; /* Ou,posso usar está forma,para meter as letras grandes 
+    text-transform: uppercase;*/
+    font-family: var(--fonte2);
+    font-size: 4.3vw;  /* Ao usar o valor 4.3vw(widht),equivale a 4.3% da tela e permite que ao mexer na largura do site,as letras se ajustem ao tamanho que está.
+
+    Se usar está forma,(font-size: 4em; )por exemplo,quando eu mexer na largura do site,as letras ficam sempre do mesmo tamanho!! */
 }
 
 header > p {
@@ -40,6 +56,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;     /* Serve,para dar espaço entre linhas  */
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 3.5vw;
 }
 
 section.normal {
@@ -50,6 +68,12 @@ section.normal {
 section.imagem {
     background-color: rgb(51, 51, 51);
     color: white;
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.253);
+    display: inline-block;
+    padding: 5px;
 }
 
 footer {
