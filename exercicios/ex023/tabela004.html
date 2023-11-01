@@ -25,6 +25,29 @@
             padding: 10px;
         }
     </style>
+    <!--
+
+    Obs.: O W3C recomenda que você SEMPRE USE os escopos em toda e qualquer célula de título ( th ).
+
+    Esse parâmetro é importante para que os mecanismos de busca (google por ex) consigam analisar dos dados da sua tabela de forma coerente, de forma que faça sentido. Tais parâmetros não causam nenhum resultado visual, mas é muito útil de um ponto de vista semântico.
+
+
+    ESCOPOS DE GRUPO:
+
+
+    Os escopos de grupo são os seguintes: " colgroup " e " rowgroup " (usar como valor no parâmetro "scope" ). Eles são utilizados para associarmos determinados títulos ( th EXPANDIDO ) à um GRUPO de linhas ou um GRUPO de colunas.
+
+
+    Basicamente, você deve usar os valores de escopo em grupo sempre que a sua célula de título abranger mais de uma linha (conjunto de linhas) ou mais de uma coluna (conjunto de colunas). Se você usar um valor simples (col/row) para apontar para um conjunto, somente a primeira linha ou a primeira coluna desse conjunto será considerada nesse apontamento... Isso não deve ser feito.
+
+
+    Nota: Quando usamos expansão/mesclagem em uma célula de título, nós temos que analisar o apontamento do escopo pelo grupo e não pelo individual.
+
+
+    Entretanto, não é sempre que uma célula de título com expansão/mesclagem irá precisar ter um escopo em grupo. Por mais que o título tenha mesclagem, se os dados desse título estiverem em uma única linha por exemplo, o escopo deve ser simples. Uma célula de título expandida não obrigatoriamente tem que ter um escopo em grupo, é importante que você tenha essa noção e saiba avaliar cada caso.
+
+
+     -->
 </head>
 <body>
     <h1>Exercício de Tabelas</h1>
@@ -32,14 +55,20 @@
         <caption>Filmes Favoritos</caption>
         <thead>
             <tr>
-                <th>Grupos</th>
-                <th>Nomes</th>
-                <th colspan="3">Filmes</th>
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="colgroup">Filmes</th>
             </tr>
         </thead>
+        <tfoot>
+            <tr>
+                <th colspan="4" scope="row">Total</th>
+                <td>1000</td>
+            </tr>
+        </tfoot>
         <tbody>
             <tr>
-                <th rowspan="3">Mulheres</th>
+                <th rowspan="3" scope="rowgroup">Mulheres</th>
                 <td>Ana Maria</td>
                 <td>Alien</td>
                 <td>Rambo</td>
@@ -58,7 +87,7 @@
                 <td>Big Hero</td>
             </tr>
             <tr>
-                <th rowspan="3">Homens</th>
+                <th rowspan="3" scope="rowgroup">Homens</th>
                 <td>Bruno Mendonça</td>
                 <td>Intocáveis</td>
                 <td>Amnésia</td>
