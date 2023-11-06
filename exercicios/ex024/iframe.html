@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estudos de iframe</title>
+    <style>
+        iframe {
+            height: 400px;
+            width: 400px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     <h1>Testando o uso de um iframe</h1>
     <p>
         Acessando o site do 
         
-        <iframe src="https://www.cursoemvideo.com/" frameborder="0"></iframe>
-        
+        <iframe src="https://www.cursoemvideo.com/" frameborder="0">
+            <a href="https://www.cursoemvideo.com/" target="_blank">Curso em vídeo</a>
+            <!-- [Seu navegador não é compatível com isso] - escrevo isso ou coloco o link do site, porque pode acontecer que em certos navegadores de dispositivos móveis não consiga abrir o iframe. -->
+        </iframe>
         
         para aprender a programar.
     </p>
@@ -23,13 +32,20 @@
 
     <p>O repositório do Guanabara
 
-        <iframe src="https://gustavoguanabara.github.io" frameborder="0">
+        <!-- Tamanho padrão do iframe 300x150 -->
+
+        <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500px" width="500px">
             <a href="https://gustavoguanabara.github.io" target="_blank">GitHub</a>
 
         </iframe>
-
-
-
+        também é bem legal!
     </p>
+    <!-- 
+        frameborder="0"  Por padrão,não coloca borda. Más,se eu quiser colocar borda,basta colocar frameborder="1" por definição,não aumenta mais do que 1....
+
+        Colocar height="500px" width="500px" no seletor só prevalece,se não estiver nada escrito emm CSS.
+        Neste momento o que prevalece é o CSS!!
+        
+    -->
 </body>
 </html>
