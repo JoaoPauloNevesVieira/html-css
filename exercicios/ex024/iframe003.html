@@ -30,10 +30,31 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate ratione, velit doloremque neque ipsam fuga eos harum hic error veritatis quam asperiores nesciunt, mollitia commodi labore consequatur cum? Eligendi, tenetur?
     Laboriosam delectus excepturi ipsam perferendis fugiat magni, eum qui incidunt eligendi recusandae quibusdam non soluta dicta adipisci quaerat nesciunt consectetur deleniti autem. Similique provident, obcaecati exercitationem pariatur accusamus nostrum voluptate.</p>
 
-    <iframe id="tela" name="frame" srcdoc="<h1>Escolha uma das opções acima</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium molestiae voluptatum nihil, quod veniam natus officiis. Sed aperiam vitae debitis? Laudantium, omnis. Laudantium quo temporibus tempora eveniet sapiente quas optio.</p><img src='imagens/cursoemvideo-logo.png'">
+
+
+
+    <iframe id="tela" name="frame" srcdoc="
+        <h1>Escolha uma das opções acima</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium molestiae voluptatum nihil, quod veniam natus officiis. Sed aperiam vitae debitis? Laudantium, omnis. Laudantium quo temporibus tempora eveniet sapiente quas optio.</p>
+        <img src='imagens/cursoemvideo-logo.png'>">
+
+        <!--  Se eu quiser,"personalizar" o iframe com um HTML básico,posso usar o "srcdoc". Permite que adicionemos,código em HTML (ex: h1, p, img) tudo dentro de "" aspas. 
+        Dessa maneira,geramos uma página inicial de forma estática para o nosso iframe sem precisar criar um arquivo separado. 
+        Caso queira algo mais evoluído,tenho de criar um arquivo separado com o código HTML e CSS.
+        E colocar em (iframe src="") 
+        -->
         <p>Infelizmente seu navegador não é compatível com isso.</p>
     </iframe>
+
+
+        <!-- 
+            Se eu não quiser personalizar e o cliente não se importar,posso colocar no iframe logo a página 1.
+         -->
+
+    <iframe id="tela" name="frame" src="paginas-extras/pag001.html">
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+    
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, commodi pariatur? Facere natus beatae, aliquam recusandae doloremque numquam quasi quo a ducimus perspiciatis cumque rem ipsam deleniti magnam rerum molestiae!
     Temporibus, porro reprehenderit. Soluta laborum maxime eos id esse necessitatibus nam sed, asperiores rerum maiores perspiciatis expedita officiis dolor molestias provident labore consequuntur porro optio dicta nostrum. Adipisci, nobis labore!</p>
