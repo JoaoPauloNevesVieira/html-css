@@ -12,12 +12,213 @@
 </head>
 <body>
     <h1>Meu primeiro Formulário</h1>
-    <form action="cadastro.php" autocomplete="off"> <!-- autocomplete="off" serve para -->
+    <form action="cadastro.php" method="post" autocomplete="off"> 
         <p><label for="inome">Nome:</label> 
             <input type="text" name="nome" id="inome"></p>
         <p><label for="isobrenome">Sobrenome:</label> 
             <input type="text" name="Sobrenome" id="isobrenome"></p>
         <p><input type="submit" value="Enviar"></p>
     </form>
+    
+    <!-- autocomplete="off" serve para Quando vamos preencher um formulário, ao clicarmos em determinadas caixas de texto é possível que o navegador do usuário auxilie da digitação dos dados com o a ferramenta "autocomplete" (preenchimento automático do campo). Quando essa ferramenta é ativada, uma janela com sugestões é exibida para que o usuário possa escolher algum dado... Acontece que em algumas situações pode ser que o autocomplete atrapalhe na visibilidade dos campos, poluindo o nosso formulário.
+
+    -->
+
+
+     <!--
+        
+        
+
+        PARA ONDE MANDAR OS DADOS DE UM FORMULÁRIO?
+
+
+
+        Depois que você criar um formulário simples em HTML, é possível preencher os campos e até mesmo clicar no botão "Enviar"... Entretanto os dados simplesmente somem ao clicar no botão. Para onde os dados de um formulário devem ir depois que o usuário faz a submissão? 
+
+
+
+        Normalmente nós vamos mandar e encaminhar os dados para alguma linguagem de programação, como por exemplo: ASP, Java, PHP, JavaScript e por aí vai...
+
+
+
+        Para de fato encaminhar os dados do formulário para alguma linguagem, dentro da tag de abertura do formulário (<form>), temos que configurar o atributo " action " (por padrão esse atributo já vem embutido dentro da tag form)... Como valor desse atributo, devemos inserir o nome do script que vai receber os dados (ex: cadastro.php).
+
+
+
+        Obs.: Sim, para poder cadastrar os dados do formulário, é necessário criar um script, um programa... Que terá como função justamente essa finalidade de cadastro.
+
+
+
+        Depois de configurar o atributo "action" especificando o script que vai receber os dados, a ação desse atributo só vai ser disparada (iniciando o envio dos dados do formulário) quando o usuário clicar no botão "Enviar" (input submit), no botão de submissão do form...
+
+
+
+        *Se você colocar como valor de "action" um nome fictício de um script que não existe, ao clicar em "Enviar" no formulário, simplesmente irá ocorrer um erro, já que o sistema não vai encontrar o arquivo desse script. 
+
+
+
+        INPUTS (CAMPOS DE ENTRADA) E OS ATRIBUTOS "NAME" E "ID":
+
+
+
+        Na maioria dos tipos de input para formulários (componentes de entrada de dados), é necessário ter os atributos "name" e "id"... Ao inserir um componente, por padrão esses dois atributos já acompanham a tag de input. Você pode dar o mesmo nomen para ambos se quiser.
+
+
+
+        Vale lembrar que o valor do id deve ser único para cada documento, já o valor do name pode ocorrer mais de uma vez por documento.
+
+
+        ID: O id é importante para o browser (front-end), para a manipulação do DOM (arvore do documento), CSS e usado para criar o VÍNCULO entre a nossa label e o seu respectivo componente.
+        Já para linguagens como o JavaScript, o id é mais utilizado, mesmo sendo para o servidor... (No JS até dá para identificar e puxar o campo usando o name, mas o id é o considerado padrão para a linguagem).
+
+
+
+        NAME: é principalmente usado para elementos do tipo input em forms, ou seja para campos de inserção de dados e é exatamente o name que identifica no servidor o campo. é importante para o servidor/linguagens de programação (back-end) ,só devo usar a tag "name" em certas linguagens de programação, como o PHP por exemplo... e o HTML.
+
+
+        Dessa maneira, entenda que você sempre precisa identificar todos os inputs (componentes de entrada) do formulário com um name e com um id, ambos tem suas funções. (a única exceção para isso seria o botão de submissão, que mesmo sendo um input não necessita desses atributos de identificação, visto que não recebe dados e não tem etiqueta).
+
+
+
+        VÍNCULO ENTRE LABELS E COMPONENTES:
+
+
+
+        É muito importante que exista um vínculo entre a label e o seu respectivo componente... O navegador não é inteligente o suficiente para saber que determinada etiqueta está ligada a tal componente, por isso essa configuração de ligação deve ser feita...
+
+
+
+        Para fazer essa ligação, estabelecer esse vínculo entre a label e o componente, na tag da etiqueta <label> devemos usar o atributo " for " (por padrão esse atributo já vem embutido dentro da tag label).
+
+
+
+        Como valor de "for", você deve justamente inserir o nome do id do respectivo componente de entrada da label.
+
+
+
+        Obs.: Geralmente damos a mesma nomenclatura para o name e o id de um componente input, mas também existe a possibilidade de dar nomenclaturas diferentes para esses atributos.
+
+
+
+        Considerando que o atributo name e id do seu componente possuem nomenclaturas diferentes: Para o valor de "for", obrigatoriamente usamos sempre o id, visto que "for" só aceita o id para criar o vínculo entre a label e o respectivo input. (se as nomenclatura de name e id forem iguais, o 'for' usa o id do mesmo jeito).
+
+
+
+        Depois que você configurar o atributo "for" da sua label com o id do input, o vínculo entre essa label e o input estará firmado.
+
+
+
+        Nota: Não se cria um formulário sem relacionar o label ao input, é importantíssimo que você sempre estabeleça o vínculo. Caso contrário isso vai dificultar o trabalho dos mecanismos de busca, do HTML e consequentemente do seu navegador, visto que eles não irão saber qual caixa input está relacionada com qual label...
+
+
+
+        Depois de estabelecer o vínculo, visualmente o nosso formulário estará igual, no entanto a parte semântica estará funcionando adequadamente e é isso que mais importa.
+
+
+
+        Fora que, criando a ligação, ao clicar diretamente na label na página, a sua respectiva caixa de componente vinculada fica sinalizada e o cursor de texto da caixa (se for uma caixa de texto) é ativado, selecionando a caixa. 
+
+
+
+        Isso pode ser útil principalmente para usuários de celular, visto que a tela é menor e muitas vezes ocorre do user errar o clique com o dedo... Apertar num ponto específico no celular às vezes pode ser complicado, um label vinculado adequadamente significa uma área maior de sensibilidade, ajudando na experiência do usuário durante a utilização e preenchimento do formulário.
+
+     -->
+
+
+     <!--
+        
+        Métodos GET e POST
+
+
+
+Resumo:
+Existem dois métodos que são simples para  envio de formulário. São eles: method="GET" e method="POST"
+
+
+
+o primeiro é o GET (padrão), é o método que coloca os dados do formulário na URL.
+
+
+
+O método POST não deixa aparecer os dados digitados na URL
+
+
+
+Lembre-se: os dados não estão 100% protegidos mesmo com o método POST, pois eles ainda podem aparecer no 'inspecionar > network > depois de digitar os dados no formulário e enviar > procure dentro de network o cadastro que vc fez > payload > vc vai achar os dados lá.
+
+
+
+o POST nao protegeu os dados, ele apenas não mostrou os dados na URL. ainda dá pra capturar os dados se olhar dentro do corpo dos cabeçalhos das requisições da emissão dos dados. 
+Pra proteger esses dados de fato, vc precisa criptografar, e pra isso se utiliza HTTPS (outro protocolo de transmissão de dados). Pois o HTTP é o q estamos utilizamos.
+
+
+
+quando usar GET ou POST?
+
+
+
+GET: basicamente, vc vai utilizar quando os dados não foram sensíveis (ex: nome, peso, busca estilo Google) vc NAO estará pedindo senha, cartão de credito, endereço, CEP, envio de fotos ou qualquer tipo de arquivo. Utilize GET quando os dados NÃO forem sensíveis e não precisar serem protegidos.
+
+OBS: tem um limite, quando vc envia dados por GET, só pode enviar até 3 mil bytes (é aproximadamente 3 mil letras)
+
+
+
+POST: dados sensíveis (o ideal é com HTTPS para proteger dados), os dados não aparecem na URL, mais de 3 mil bytes, envio de arquivos.
+
+material de apoio: https://github.com/gustavoguanabara/html-css/tree/fe6653ecdafa5b7275a5ecb4c36a8ca14f5043e7/aulas-pdf
+
+
+
+
+
+Existem dois métodos que são simples para  envio de formulário. São eles: method="GET" e method="POST"
+
+
+QUANDO USAR GET OU POST?
+
+
+
+Em que momentos devemos utilizar o GET ou POST?
+
+
+
+GET: Basicamente você vai usar o método de envio HTTP GET quando os dados que serão enviados não forem sensíveis. Por exemplo: Nome da pessoa, peso (KG) ou buscas no estilo Google... (Quando o usuário não faz uma busca que é secreta)
+
+
+
+POST: Existem momentos que a utilização do método POST é obrigatória. Utilize o método de envio HTTP POST quando os dados que serão enviados forem sensíveis, quando você não quiser que eles apareçam na URL. 
+
+
+
+Por exemplo: Senha, número do cartão de crédito, endereço, CEP e por aí vai... Para fazer o envio de fotos ou QUALQUER TIPO DE ARQUIVO, use o POST também. Obs.: Se você está trabalhando com dados de cartão de crédito e senha, você terá que trabalhar com o protocolo HTTPS também, para proteger esses dados da forma adequada, apenas o POST não é o bastante.
+
+
+
+Nota: Se existem dois verbos/métodos diferentes (GET e POST), é porque eles foram feitos para serem utilizados em locais diferentes.
+
+
+
+As requisições do tipo GET são recomendadas para obter dados de um determinado recurso. Como em um formulário de busca ou em uma listagem de todos os produtos cadastrados. Quando você está solicitando informações para serem retornadas para você, utilize o GET.
+
+
+
+Já as requisições POST são mais utilizadas para enviar informações para serem processadas, como por exemplo, criar algum recurso, como um produto, ou cadastrar um novo cliente. Basicamente, usamos POST quando queremos salvar alguma informação no servidor.
+
+
+
+LIMITAÇÕES DO MÉTODO GET:
+
+
+
+Quando enviamos dados pelo método HTTP GET, existe um limite de até 3 mil bytes de dados para a mensagem enviada (que seria aproximadamente 3 mil letras - inseridas inicialmente num formulário). Se os dados ultrapassarem esses 3 mil bytes, não vai ser possível usar o GET (use o método POST para enviar dados com mais de 3 mil bytes) - Ou seja, se tentarmos passar uma grande quantidade de informações via GET, algumas partes podem ser perdidas no caminho.
+
+
+
+Uma outra situação em que você não vai poder usar o GET, seria em formulários que irão enviar arquivos de fotos ou qualquer tipo de arquivo. Para esses formulários que irão enviar arquivos de fotos ou qualquer tipo de arquivo, não devemos usar o GET, visto que esse método não aceita enviar arquivos. Use o método POST nesses casos.
+
+
+      -->
+
+
 </body>
 </html>
