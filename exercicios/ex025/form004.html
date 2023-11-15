@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="20">
+            </p>
+            <p>
+                <label for="iemail">E-mai:</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+            <p>
+                <label for="itelefone">Telefone:</label>
+                <input type="tel" name="Telefone" id="itelefone" required autocomplete="tel" placeholder="(xx)xxxx-xxxx" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+            </p>
+    </fieldset>
+
+        <!-- Estudar mais sobre RegEX (Regular Expressions) -->
+
+        <!-- 
+            Consigo definir um padrão com espressões regulares!
+            Para colocar essas espressões,tenho de colocar dentro de pattern="^$" (significa padrão)
+            ^ - significa iníco do padrão
+            $ - significa fim do padrão
+        
+        -->
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+</body>
+</html>
