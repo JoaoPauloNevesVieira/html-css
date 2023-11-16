@@ -27,10 +27,41 @@
         <!-- Estudar mais sobre RegEX (Regular Expressions) -->
 
         <!-- 
+
+            Neste exemplo, é sobre o telefone!
+
+            Se eu não fizer um padrão,ao inserir os numéros,ele envia se for o caso só 1 numéro,e em alguns países é preciso inserir um traço no meio dos numéros... por isso é que se define um padrão para as pessoas colocarem igual!!
+
             Consigo definir um padrão com espressões regulares!
             Para colocar essas espressões,tenho de colocar dentro de pattern="^$" (significa padrão)
             ^ - significa iníco do padrão
             $ - significa fim do padrão
+
+            Duas formas de colocar um padrão:
+
+            pattern="^[0-9]{4,5}-[0-9]{4}$" 
+
+            pattern="^\d{4,5}-\d{4}$"
+
+            pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+
+            [0-9] - Quer dizer,que só posso digitar numéros de 0 a 9
+
+            {4}   - Quer dizer,que só posso digitar 4 numéros
+
+            {4,5} - Quer dizer, que só posso colocar de 4 a 5 digítos
+
+            \d{4,5} - Quer dizer, que só posso colocar de 4 a 5 digítos e o "d" significa digítos
+
+            \( - Significa,abrir parênteses a pessoa,tem de colocar parênteses ex: pattern="^\(\d{2}\)\d{4,5}-\d{4}$"
+            Neste exemplo,tem de colocar no site (21)2124-5412 e até pode colocar o quinto numéro nos primeiros 4 numéros
+
+
+            -    - Quer dizer,que depois de digitar 4 numéros a pessoa vai ter de colocar um traço no meio dos numéros...
+            E depois, é igual ao de cima,depois do traço só posso colocar 4 numéros de 0 a 9
+            Tudo no meio de "^$" !!!!!!!
+
+            Depois, posso colocar um placeholder="(xx)xxxx-xxxx" como exemplo, para as pessoas saberem como preencher esse campo!!!
         
         -->
 
