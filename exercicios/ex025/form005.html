@@ -10,14 +10,26 @@
     <form action="cadastro.php" method="get" autocomplete="on">
         <fieldset>
             <legend>Sexo</legend>
-            <input type="radio" name="sxmas" id="isxmas">
+            <input type="radio" name="sexo" id="isxmas" value="M" checked>
             <label for="isxmas">Masculino</label> <br>
-            <input type="radio" name="sxfem" id="isxfem">
+            <input type="radio" name="sexo" id="isxfem" value="F">
             <label for="isxfem">Feminino</label>
         </fieldset>
+        <!--
+
+            Input:radio - Só serve para 2 opções (escolher um ou outro)
+            
+            Em input "radio",tenho de colocar o mesmo nome em name="" ,só se usa neste input!!
+            Para poder selecionar uma das opções,senão,eu não consigo desmarcar uma das opções quase tenha colocado errado!!
+
+            value="M" ou "F"  -  serve para identificar uma das opções escolhidas!
+
+            checked  -  serve,para aparecer já selecionado a opção que se quer...caso a gente queira que aparece como padrão por ex: naqueles emails se a pessoa quer receber publicidade  e tem de desmarcar para não receber...
+
+         -->
         <fieldset>
             <legend>Esportes favoritos</legend>
-            <input type="checkbox" name="esfut" id="iesfut">
+            <input type="checkbox" name="esfut" id="iesfut" checked>
             <label for="iesfut">Futebol</label> <br>
             <input type="checkbox" name="esbas" id="iesbas">
             <label for="iesbas">Basquete</label> <br>
@@ -26,6 +38,12 @@
             <input type="checkbox" name="" id="">
             <input type="checkbox" name="" id="">
             <input type="checkbox" name="" id="">
+
+            <!--  
+                coloquei alguns diferentes,para mais tarde eu ver a diferença do certo e do errado... 
+                os primeiros de cima,estão corretos.
+            
+            -->
         </fieldset>
 
         <p>
