@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Exemplo de Formulário</title>
 </head>
 <body>
     <h1>Exemplo de Formulário</h1>
@@ -23,6 +23,12 @@
                             <option value="SP">São Paulo</option>
                         </optgroup>
 
+                        <optgroup label="Região Nordeste">
+                            <option value="MG">Maranhão</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                        </optgroup>
+
                     </select>
                 </p>
                 <p>
@@ -31,43 +37,73 @@
                     <datalist id="lstprof">
                         <option value="ADM">Administrador</option>
                         <option value="CON">Contabilista</option>
-                        <option value="DEV">Desenvolvedor</option>
-                        <option value="PROF">Professor</option>
+                        <option>Desenvolvedor</option>
+                        <option>Professor</option>
                     </datalist>
+                    <!-- 
+                        Desta maneira, No site aparece ADM e Administrador!
+                        Se eu não quiser,basta apagar o value="" !
+                     -->
+                </p>
+                <p>
+                    <label for="imsg">Mensagem:</label> <br>
+                    <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Escreva a sua mensagem aqui..."></textarea>
+
+                    <!--
+                        cols="30" - É a largura da caixa de texto
+                        rows="10" - É a altura da caixa de texto
+
+                     -->
+
+                    <!-- 
+                        Tenho de usar o method="post" para ter privacidade do que envia,Não Dá SEGURANÇA!
+                        E tb,não tem limite de envio ou escrita como o method="get"!!
+                     -->
                 </p>
         </fieldset>
-
-
         <p>
             <label for="iprof">Profissão:</label>
-            <input type="text" name="prof" id="iprof" list="lsprof">
-            <datalist id="lsprof">
-                <option value="ADM">Administrador</option>
-                <option value="CON">Contabilista</option>
-                <option value="DEV">Desenvolvedor</option>
-                <option value="PROF">Professor</option>
-            </datalist>
+            <select name="prof" id="iprof">
+            <option value="" disabled selected hidden>Escolha uma profissão</option>
+            <option value="ADM">Administrador</option>
+            <option value="CON">Contabilista</option>
+            <option value="DEV">Desenvolvedor</option>
+            <option value="PROF">Professor</option>
+            </select>
         </p>
 
 
-
         <p>
-            <label for="iprof">Profissão:</label>
-            <input type="text" name="prof" id="iprof" list="lsprof">
-            <datalist id="lsprof">
-                <option value="ADM">Administrador</option>
-                <option value="CON">Contabilista</option>
-                <option value="DEV">Desenvolvedor</option>
-                <option value="PROF">Professor</option>
+    
+            <label for="iest">Estado:</label>
+            <input type="text" name="estado" id="iest" list="estados">
+    
+            <datalist id="estados">
+                <option value="MG">Minas Gerais - Região Sudeste</option>
+                <option value="RJ">Rio de Janeiro - Região Sudeste</option>
+                <option value="SP">São Paulo - Região Sudeste</option>
+                <option value="MA">Maranhão - Região Nordeste</option>
+                <option value="PE">Pernambuco - Região Nordeste</option>
+                <option value="RN">Rio Grande do Norte - Região Nordeste</option>
             </datalist>
+
+            <!-- 
+
+                Usando o "datalist",eu não consigo fazer um grupo só com os mesmos estados como no "select" !!!
+
+                O elemento <datalist> não suporta agrupamento como o <optgroup> em <select>. 
+                O <datalist> é uma lista simples de opções sem suporte nativo para grupos.
+
+                Se você precisa de funcionalidades de agrupamento como aquelas fornecidas pelo <optgroup>, a solução mais apropriada seria usar um elemento <select> junto com <optgroup>.
+                O <select> é projetado para oferecer suporte a agrupamento de opções, enquanto o <datalist> é mais simples e não possui essa funcionalidade.
+
+
+                    Em "datalist",o usuário consegue escrever alguma opção que não tenha no menu.
+                    Como nos exemplos de cima em estados e profissões : Cozinheiro ou Bahia
+
+                    Em "select",não consegue escrever nada,só pode selecionar o que tem no menu!!
+             -->
         </p>
-        
-
-
-
-
-
-
         <p>
             <input type="submit" value="Enviar">
             <input type="reset" value="Limpar">
