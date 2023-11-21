@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="inum">Número:</label>
+            <input type="range" name="num" id="inum" min="0" max="200" value="80" oninput="ival.innerHTML = Number(inum.value)"> 
+            <output id="ival">80</output>
+            <!-- 
+                O input:range , por padrão,vai de 0 a 100 para colocar de outra maneira,basta seguir o código acima....
+
+
+                para aparecer o número a frente da barra de range, tenho de colocar o código: <output id="ival">80</output> , Más para aparecer o número correto quando mexo na barra,tenho de colocar este código: oninput="ival.innerHTML = Number(inum.value)">
+
+             -->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+
+    
+</body>
+</html>

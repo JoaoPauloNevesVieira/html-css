@@ -17,11 +17,17 @@
             <label for="in2">Número 2:</label>
             <input type="number" name="n2" id="in2" min="0" max="50" required
             oninput="isoma.innerHTML= Number (in1.value) + Number(in2.value)">
+            <!-- 
+                oninput="" - quer dizer,que é a pessoa a inserir os valores no site para depois ,neste caso fazer a soma....
+             -->
         </p>
         <p>
             <label for="isoma">Soma:</label>
             <output name="soma" id="isoma">0</output>
-
+            <!-- 
+                Este código de cima,só faz a soma!!
+                Náo assume o total da soma,quando for a enviar!!!
+             -->
         </p>
 
         <p>
